@@ -26,9 +26,9 @@ The goal is simple: Given a bunch of applicant details (like income, credit hist
 
   I didn't just pick one model; I compared two to see which was smarter:
   
-    -Logistic Regression: My baseline. It’s simple and fast.
+  --Logistic Regression: My baseline. It’s simple and fast.
     
-    -Random Forest: My "heavy lifter." I limited the depth to 2 so it wouldn't just memorize the data (overfitting) but actually learn the patterns.
+  --Random Forest: My "heavy lifter." I limited the depth to 2 so it wouldn't just memorize the data (overfitting) but actually learn the patterns.
 
 ---> How to Use This :
 
