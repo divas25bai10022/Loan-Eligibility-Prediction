@@ -1,0 +1,2 @@
+# Loan Eligibility Prediction
+This project develops a Binary Classification model to automate loan eligibility screening using historical applicant data. It involves data preprocessing (imputation of missing values), Exploratory Data Analysis (EDA), and feature engineering to combine household incomes for better accuracy. Two machine learning algorithms, Logistic Regression and Random Forest, are implemented and compared to predict approval status.
