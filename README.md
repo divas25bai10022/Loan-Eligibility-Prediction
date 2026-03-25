@@ -15,7 +15,7 @@ The goal is simple: Given a bunch of applicant details (like income, credit hist
   I used the Median for numbers like LoanAmount because I didn't want a few massive loans to skew the average.
   For categories like Gender or Self_Employed, I just used the Mode (most common value).
   
-  2. A Little Bit of "Brain Work" (Feature Engineering)
+  3. A Little Bit of "Brain Work" (Feature Engineering)
   One thing I realized is that banks don't just look at one person; they look at the whole household. I combined ApplicantIncome and CoapplicantIncome into a
   single Total_Income column. This actually made the model's logic a lot stronger.
   
@@ -25,13 +25,17 @@ The goal is simple: Given a bunch of applicant details (like income, credit hist
 ---> The Models : 
 
   I didn't just pick one model; I compared two to see which was smarter:
+  
     -Logistic Regression: My baseline. It’s simple and fast.
+    
     -Random Forest: My "heavy lifter." I limited the depth to 2 so it wouldn't just memorize the data (overfitting) but actually learn the patterns.
 
 ---> How to Use This :
 
   1.)Make sure you have the loan_data.csv in the root folder.
+  
   2.)Install the basics: pip install pandas matplotlib seaborn scikit-learn
+  
   3.)Run the script and check the Confusion Matrix—it's the best way to see where the model gets confused!
 
 --->Conclusion :
