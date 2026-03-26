@@ -1,0 +1,47 @@
+Project Report: Loan Eligibility Prediction System
+
+Course: Fundamentals of AI and ML (VITyarthi)
+Student Name: Divas Jain
+Registration number: 25BAI10022
+Date: March 2026
+________________________________________
+
+1) Introduction & Problem Statement
+Why this project?
+In the banking sector, deciding who gets a loan is a high-stakes task. Doing this manually is not only slow but also prone to human bias. I chose the Loan Eligibility Prediction problem because it is a classic "Binary Classification" challenge. The goal was to build a machine learning model that could look at an applicant’s profile (income, credit history, etc.) and predict whether they are a "safe" bet for a loan.
+Why it matters?
+Automation in finance isn't just about speed; it's about consistency. A well-trained model can process thousands of applications in seconds, helping banks reach underserved customers faster while minimizing the risk of defaults.
+________________________________________
+
+2) The Data & Exploratory Analysis (EDA)
+I used a dataset containing 614 observations with 13 features. Before jumping into the math, I wanted to see what the data was actually telling me.
+Key Finding: My biggest "Aha!" moment was during the EDA phase. By plotting Credit History against Loan Status, it became immediately clear that having a credit history score of 1.0 was almost a prerequisite for approval. This taught me that in real-world AI, some features carry significantly more weight than others.
+________________________________________
+
+3) My Approach & Technical Decisions
+I followed a structured pipeline, but I made a few specific "human" choices along the way:
+
+	•Handling the "Messy" Parts: Real data is rarely perfect. I found several missing values. Instead of just deleting those rows (which would waste data), I filled 	numerical gaps with the Median to avoid being skewed by outliers and used the Mode for categorical data like "Gender."
+
+	•The "Total Income" Idea: I noticed the data split income into "Applicant" and "Co-applicant." In reality, a bank looks at the total household power. I engineered a 	new feature called Total_Income to simplify the model's logic.
+
+	•Choosing the Model: I didn't want to just use one algorithm. I started with Logistic Regression as a baseline because it's easy to explain. Then, I moved to Random 	Forest to see if an "ensemble" approach (multiple decision trees) could capture more complex patterns.
+________________________________________
+
+4) Challenges Faced
+      •	Overfitting: Initially, my Random Forest was too complex. It was performing perfectly on my training data but failing on the test data. I had to "prune" the trees by 	setting max_depth=2 to make the model more generalized and realistic.
+
+      •	Categorical Data: Computers don't understand the word "Graduate." Using LabelEncoder was a learning curve for me—ensuring that every text string was converted into a 	number that the model could actually process.
+________________________________________
+
+5) Results & Evaluation
+I evaluated the final model using a Confusion Matrix. This was important because, in banking, a "False Positive" (approving a bad loan) is much worse than a "False Negative" (rejecting a good one).
+	•Logistic Regression Accuracy: ~80%
+	•Random Forest Accuracy: ~81%
+While the jump in accuracy wasn't massive, the Random Forest felt more stable and handled the variations in income levels better.
+________________________________________
+
+6) What I Learned (Conclusion)
+This project taught me that AI is 80% data preparation and 20% modeling. I spent much more time cleaning null values and thinking about Total_Income than I did actually running the algorithms.
+If I were to do this again, I would try to collect more data on "Debt-to-Income" ratios, as that is a huge factor in real-world banking that wasn't fully captured here. Overall, this project gave me a solid foundation in how to take a raw CSV file and turn it into a predictive tool.
+
