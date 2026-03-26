@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 #1) Load Data
 # Loading the dataset
-data = pd.read_csv(r'C:\Users\nitin\Desktop\0\Loan Eligibility Prediction\Loan-Eligibility-Prediction\loan_data.csv')
+data = pd.read_csv(loan_data.csv)
 
 # Checking for nulls first thing
 print("Missing values in each column:")
