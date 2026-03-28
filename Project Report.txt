@@ -36,8 +36,8 @@ ________________________________________
 
 5) Results & Evaluation
 I evaluated the final model using a Confusion Matrix. This was important because, in banking, a "False Positive" (approving a bad loan) is much worse than a "False Negative" (rejecting a good one).
-	•Logistic Regression Accuracy: ~80%
-	•Random Forest Accuracy: ~81%
+	•Logistic Regression Accuracy: ~78%
+	•Random Forest Accuracy: ~79%
 While the jump in accuracy wasn't massive, the Random Forest felt more stable and handled the variations in income levels better.
 ________________________________________
 
